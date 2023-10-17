@@ -1,32 +1,31 @@
-import CovidContext from '../../context/CovidContext'
+import {Link} from 'react-router-dom'
 import './index.css'
+import Header from '../Header'
 
 const NotFound = () => (
-  <CovidContext.Consumer>
-    {value => {
-      const {isThemeLight} = value
-      const routeClassName = isThemeLight
-        ? 'not-found-route not-found-route-light'
-        : 'not-found-route'
-      return (
-        <div className={routeClassName}>
-          <img
-            className="not-found-image"
-            alt="not-found-pic"
-            src="https://th.bing.com/th/id/OIP.wrhV89ZbVqiO_r5pIi2L6AHaDu?pid=ImgDet&rs=1"
-          />
-          <h1 className="not-found-heading">PAGE NOT FOUND</h1>
-          <p className="not-found-paragraph">
-            we are sorry, the page you requested could not be found Please go
-            back to the home page
-          </p>
-          <button type="button" className="button">
+  <div className="container-not-found">
+    <Header />
+    <div className="not-found-data">
+      <img
+        src="https://res.cloudinary.com/dzfr8ujso/image/upload/v1650906728/notfound_okkgyt.png"
+        alt="not-found-pic"
+        className="not-found-image"
+      />
+
+      <h1 className="not-found-title">PAGE NOT FOUND</h1>
+      <p className="not-found-para">
+        we are sorry, the page you requested could not be found
+      </p>
+
+      <div className="button-container">
+        <Link to="/">
+          <button type="button" className="home-button">
             Home
           </button>
-        </div>
-      )
-    }}
-  </CovidContext.Consumer>
+        </Link>
+      </div>
+    </div>
+  </div>
 )
 
 export default NotFound

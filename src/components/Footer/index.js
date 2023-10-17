@@ -1,30 +1,20 @@
-import {FaTwitter} from 'react-icons/fa'
-import {VscGithubAlt} from 'react-icons/vsc'
 import {FiInstagram} from 'react-icons/fi'
-import CovidContext from '../../context/CovidContext'
-
+import {VscGithubAlt} from 'react-icons/vsc'
+import {FaTwitter} from 'react-icons/fa'
 import './index.css'
 
-const Footer = () => (
-  <CovidContext.Consumer>
-    {value => {
-      const {isThemeLight} = value
-      const footerClassName = isThemeLight ? 'footer footer-light' : 'footer'
-      return (
-        <div className={footerClassName}>
-          <h1 className="footer-logo-title">COVID19INDIA</h1>
-          <p className="footer-paragraph">
-            we stand with everyone fighting on the front lines
-          </p>
-          <div className="footer-icon-container">
-            <VscGithubAlt className="footer-icon" />
-            <FiInstagram className="footer-icon" />
-            <FaTwitter className="footer-icon" />
-          </div>
-        </div>
-      )
-    }}
-  </CovidContext.Consumer>
-)
-
-export default Footer
+export default function Footer() {
+  return (
+    <div className="footer-container">
+      <h1 className="logo">COVID19INDIA</h1>
+      <p className="tagline">
+        we stand with everyone fighting on the front lines
+      </p>
+      <div className="icon-container">
+        <VscGithubAlt className="icon" />
+        <FiInstagram className="icon" />
+        <FaTwitter className="icon" />
+      </div>
+    </div>
+  )
+}

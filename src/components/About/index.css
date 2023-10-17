@@ -1,58 +1,63 @@
-.about-route,
-.about-route-light {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.about-container {
+  background-color: #161625;
+  width: 100vw;
   min-height: 100vh;
-  background-color: black;
-  color: white;
 }
 
-.about-route-light {
-  background-color: white;
-  color: black;
-}
-
-.about-route-content {
-  flex-grow: 1;
-  padding: 20px;
-}
-
-.about-heading,
-.vaccine-ready-heading {
-  font-weight: 500;
-  font-size: 30px;
-  margin: 0;
-}
-
-.vaccine-ready-heading {
-  font-size: 20px;
-}
-
-.update-paragraph {
-  color: grey;
-}
-
-.faqs-unordered-list {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
+.main-container {
+  width: 80%;
+  margin-top: 64px;
+  /* display: flex;
   flex-direction: column;
+  text-align: left; */
+  padding-left: 70px;
 }
 
-.faq-list-item {
-  margin-bottom: 20px;
+.about-heading {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  color: #f8fafc;
+  /* margin-left: 30px; */
 }
-.question {
-  color: grey;
-  font-weight: 400;
-  margin: 0;
-  font-size: 14px;
+.container {
+  margin-left: 32px;
 }
-
-.answer {
-  color: rgba(0, 150, 255, 1);
-  font-weight: 400;
-  margin-top: 10px;
-  font-size: 13px;
+.faqs-list {
+  list-style: none;
+}
+.faqs-question {
+  color: #94a3b8;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Roboto';
+}
+.faqs-answer {
+  color: #3b82f6;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Roboto';
+  margin-bottom: 12px;
+}
+.about-description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #94a3b8;
+}
+.about-vaccine-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #e2e8f0;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
 }
